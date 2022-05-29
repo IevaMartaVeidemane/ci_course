@@ -4,9 +4,14 @@ pipeline {
         string(name: 'ENVIRONMENT', defaultValue: 'DEV', description: 'Testing environment')
     }
     stages {
-        stage('test') {
+        stage('test') { 
             steps {
-                echo "Running UI tests on ${params.ENVIRONMENT}"
+                script {
+                    def browsers = ['chrome', 'firefox', 'safari']
+                    for (int i = 0; i < browsers.size(); ++i) {
+                        echo "Running UI tests on ${params.ENVIRONMENT} environment and ${browsers[i]} browser"
+                    }
+                }
             }
         }
     }
