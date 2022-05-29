@@ -3,7 +3,6 @@ pipeline {
     parameters {
         string(name: 'ENVIRONMENT', defaultValue: 'DEV', description: 'Testing environment')
     }
-    }
     stages {
         stage('test') {
             steps {
