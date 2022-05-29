@@ -5,7 +5,7 @@ pipeline {
     }
     }
     stages {
-        stage('build') {
+        stage('test') {
             steps {
                 echo "Running UI tests on ${params.ENVIRONMENT}"
             }
