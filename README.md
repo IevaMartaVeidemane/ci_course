@@ -28,3 +28,5 @@ apk add --update build-base mariadb-dev nodejs tzdata openjdk8-jre && rm -rf var
 
 5. test 2
 
+6. test 3
+
